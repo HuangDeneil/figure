@@ -1,6 +1,7 @@
 
-```bash
-samtools sort -@ 16 S09.bwa.bacteria.basic.sam >S09.bwa.bacteria.basic.sort.sam 
+``` bash
+samtools view -@ 16 -b input.sam -o input.bam
+samtools sort -@ 16 input.bam > input.sort.bam 
 samtools idxstats -@ 16 S09.bwa.sort.bam > data.txt
 ```
 
